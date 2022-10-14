@@ -1,0 +1,214 @@
+td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+a:link {
+	color: #000000;
+    text-decoration: none;
+    }
+a:visited {
+	color: #000000;
+    text-decoration: none;
+    }
+a:hover {
+	color: #000000;
+    text-decoration: underline;
+    }
+a:active {
+	color: #000000;
+    text-decoration: none;
+    }
+
+body {
+	background: #CCCCCC URL('fundo_tudo.jpg') repeat center top;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+}
+
+#lala {
+	background: URL('fundo.jpg') no-repeat center top;
+
+}
+
+.progress {	width: 1px;
+	height: 14px;
+	color: white;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+    overflow: hidden;
+	background-color: #33659B;
+	padding-left: 0px;
+}
+
+
+.textfields {
+        BORDER-BOTTOM: 1px solid;
+        BORDER-LEFT: 1px solid;
+        BORDER-RIGHT: 1px solid;
+        BORDER-TOP: #003366 1px solid;
+        COLOR: #000000;
+        FLOAT: none;
+        FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+        FONT-SIZE: 11px;
+        MARGIN: 0px 0px 0pt;
+        background-color: #FFFFFF;
+        font-weight: lighter
+}
+
+.textfields_erro {
+        BORDER-BOTTOM: #000000 1px solid;
+        BORDER-LEFT: #000000 1px solid;
+        BORDER-RIGHT: #000000 1px solid;
+        BORDER-TOP: #000000 1px solid;
+        COLOR: #000000;
+        FLOAT: none;
+        FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+        FONT-SIZE: 11px;
+        MARGIN: 0px 0px 0pt;
+        background-color: #FFE3AA;
+        font-weight: lighter
+}
+
+.botao {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      color: #000000;
+      font-weight: normal
+}
+
+
+
+.link_nav{
+	color: #000000;
+    text-decoration: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+.texto_rodape{
+	color: #000000;
+    text-decoration: none;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: Normal;
+
+}
+
+.texto_modal{
+	color: #000000;
+    text-decoration: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+.texto_titulo_tabela{
+	color: #FFFFFF;
+    text-decoration: none;
+	font-size: 11px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+.texto_leg_tabela{
+	color: #000000;
+    text-decoration: none;
+	font-size: 11px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: Normal;
+
+}
+
+.texto_titulo_ferramenta {
+    color: #00376F;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto_verde {
+    color: #006600;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.texto_vermelho {
+    color: #FF0000;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.texto_azul {
+    color: #000066;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.texto_info{
+	color: #000000;
+    text-decoration: none;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: Normal;
+}
+
+.texto_subitem_tabela{
+	color: #000000;
+    text-decoration: none;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.texto_controle_tabela{
+	color: #000000;
+    text-decoration: none;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.texto_conteudo_tabela{
+	color: #000000;
+    text-decoration: none;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: Normal;
+}
+
+.texto_paginacao{
+	color: #000000;
+    text-decoration: none;
+	font-size: 10px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: Normal;
+}
+
+.texto_paginacao_destaque{
+	color: #000066;
+    text-decoration: none;
+	font-size: 12px;
+	font-family: Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.texto_nav {
+    color: #000000;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

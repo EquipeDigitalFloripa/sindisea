@@ -1,0 +1,182 @@
+{CABECALHO}
+<head>
+    {META}
+
+    {CSS}
+
+    {JS}
+
+    {JAVASCRIPT}
+
+    {VALIDACAO}
+
+    {TITLE}
+
+    {COMPONENTES}
+
+    {MODAIS}
+
+    <link href="componente_comum/swfupload/default.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="componente_comum/swfupload/swfupload.js"></script>
+    <script type="text/javascript" src="componente_comum/swfupload/swfupload.swfobject.js"></script>
+    <script type="text/javascript" src="componente_comum/swfupload/swfupload.queue.js"></script>
+    <script type="text/javascript" src="componente_comum/swfupload/fileprogress.js"></script>
+    <script type="text/javascript" src="componente_comum/swfupload/handlers.js"></script>
+
+    <script type="text/javascript">
+        var swfu;
+
+        SWFUpload.onload = function () {
+            var settings = {
+                flash_url: "componente_comum/swfupload/swfupload.swf",
+                upload_url: "{URL_UPLOAD}",
+                post_params: {
+                    "PHPSESSID": "NONE",
+                    "HELLO-WORLD": "Here I Am",
+                    ".what": "OKAY"
+                },
+                file_size_limit: "8 MB",
+                file_types: "*.jpg;*.gif;*.png;*.jpeg",
+                file_types_description: "Imagens",
+                file_upload_limit: 100,
+                file_queue_limit: 0,
+                custom_settings: {
+                    progressTarget: "fsUploadProgress",
+                    cancelButtonId: "btnCancel"
+                },
+                debug: false,
+                // Button Settings
+                button_image_url: "componente_comum/swfupload/images/XPButtonUploadText_61x22.png",
+                button_placeholder_id: "spanButtonPlaceholder",
+                button_width: 61,
+                button_height: 22,
+                // The event handler functions are defined in handlers.js
+                swfupload_loaded_handler: swfUploadLoaded,
+                file_queued_handler: fileQueued,
+                file_queue_error_handler: fileQueueError,
+                file_dialog_complete_handler: fileDialogComplete,
+                upload_start_handler: uploadStart,
+                upload_progress_handler: uploadProgress,
+                upload_error_handler: uploadError,
+                upload_success_handler: uploadSuccess,
+                upload_complete_handler: uploadComplete,
+                queue_complete_handler: queueComplete, // Queue plugin event
+
+                // SWFObject settings
+                minimum_flash_version: "9.0.28",
+                swfupload_pre_load_handler: swfUploadPreLoad,
+                swfupload_load_failed_handler: swfUploadLoadFailed
+            };
+
+            swfu = new SWFUpload(settings);
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="lala" id="lala">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="90%" valign="top">
+                                <img src="img/pixel.gif" width="100" height="110">
+                            </td>
+                            <td width="10%" valign="top">
+                                {NAV}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" cellspacing="5" cellpadding="5">
+                        <tr>
+                            <td valign="top">
+
+                                {MENU}
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                
+                                {TITLE_POST}
+                                <br>
+                                <form name="form1" method="post" action="?">
+                                    {HIDDENS}
+
+                                    {INFOACAO}
+
+                                    {FILTROS}
+
+                                    <div align="center" style="margin-top:-40px;"><br>
+                                        <table width="900" bgcolor="#ccc" border='0' cellpadding="0" cellspacing="0" >
+                                            <tr bgcolor="#ffffff">
+                                                <td width="25%" bgcolor="#ffffff" nowrap="nowrap">
+                                                    <div align="center">
+                                                        <span class="texto_nav">
+                                                            <img src="temas/{TEMA}/icones/voltar.png" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_GERENCIA_FOTO}">{TITULO_GERENCIA_FOTO}</a>
+                                                        </span>
+                                                    </div>
+                                                </td> 
+                                                <td width="25%" bgcolor="#ffffff" nowrap="nowrap">
+                                                    <div align="center">
+                                                        <span class="texto_nav">
+                                                            <img src="temas/{TEMA}/icones/ordenar.png" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_ORDENAR}">{TITULO_ORDENAR}</a>
+                                                        </span>
+                                                    </div>
+                                                </td> 
+                                                <td width="25%" bgcolor="#ffffff" nowrap="nowrap">
+                                                    <div align="center">
+                                                        <span class="texto_nav">
+                                                            <img src="temas/{TEMA}/icones/voltar.png" width="16" align="absmiddle" border="0" height="16" hspace="1"> <a href="{LINK_VOLTA_GER}">{TITULO_VOLTA_GER}</a>
+                                                        </span>
+                                                    </div>
+                                                </td> 
+
+                                            </tr>
+                                        </table>
+                                        <br>
+                                    </div>
+
+                                    {TABELALISTA}
+
+                                    {PAGINACAO}
+
+                                </form>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="5" class="rodape-table">
+        <tr>
+            <td>
+                <div align="center">
+                    {RODAPE}
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    {MODALCOMP}
+
+</body>
+</html>
+

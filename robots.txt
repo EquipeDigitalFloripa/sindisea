@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /sistema/sys/arquivos
+Disallow: /sistema
+Disallow: /downloads
+Disallow: /cron

@@ -1,0 +1,123 @@
+{CABECALHO}
+<head>
+  {TITLE}
+  {META}
+  {CSS}
+  {JS}
+
+
+  {JAVASCRIPT}
+
+  {VALIDACAO}
+  {COMPONENTES}
+
+  {MODAIS}
+
+  <script src="componente_comum/formstone/jquery-2.2.2.js"></script>
+  <script src="componente_comum/formstone/core.js"></script> 
+  <script src="componente_comum/formstone/components/upload/upload.js"></script>
+  <script src="componente_comum/formstone/components/upload/upload-custom.js"></script>
+  <script>
+    $(document).ready(function () {
+        $(".upload").upload({
+            action: "{URL_UPLOAD}",
+            accept: "image/x-png,image/jpeg",
+            maxSize: 5242880, // 2 megabytes
+            beforeSend: onBeforeSend
+        }).on("start.upload", onStart)
+                .on("complete.upload", onComplete)
+                .on("filestart.upload", onFileStart)
+                .on("fileprogress.upload", onFileProgress)
+                .on("filecomplete.upload", onFileComplete)
+                .on("fileerror.upload", onFileError)
+                .on("chunkstart.upload", onChunkStart)
+                .on("chunkprogress.upload", onChunkProgress)
+                .on("chunkcomplete.upload", onChunkComplete)
+                .on("chunkerror.upload", onChunkError)
+                .on("queued.upload", onQueued);
+
+        $(".filelist.queue").on("click", ".cancel", onCancel);
+        $(".cancel_all").on("click", onCancelAll);
+    });
+  </script>
+  <link rel="stylesheet" href="componente_comum/formstone/components/upload/upload.css" />  
+  <link rel="stylesheet" href="componente_comum/formstone/components/upload/upload-custom.css" />
+  <script>
+  </script> 
+
+
+</head>
+
+<body onLoad="document.form1.pesquisa.focus();">
+
+  <div class="lala" id="lala">
+    <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="90%" valign="top">
+                <img src="img/pixel.gif" width="100" height="110"></td>
+              <td width="10%" valign="top"> 
+                {NAV} 
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+              <td valign="top">
+                {MENU}
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+
+                <form name="form1" method="post" action="?">
+                  {HIDDENS}
+
+                  {INFOACAO}
+
+                  {FILTROS}
+
+                  <div align="center"><br>
+                    <table width="700" border="0" cellpadding="1" cellspacing="1">
+                      <tr>
+                        <!--<td bgcolor="" nowrap="nowrap"><div align="center"><span class="texto_nav"><img src="temas/{TEMA}/icones/multiup.gif" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_ADD_FOTO}">{TITULO_ADD_FOTO}</a></span></div></td>-->
+                        <td bgcolor="" nowrap="nowrap"><div align="center"><span class="texto_nav"><img src="temas/{TEMA}/icones/gerenciar.gif" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_GER_FOTO}">{TITULO_GER_FOTO}</a></span></div></td>
+                        <td bgcolor="" nowrap="nowrap"><div align="center"><span class="texto_nav"><img src="temas/{TEMA}/icones/voltar.gif" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_VOLTA_GER}">{TITULO_VOLTA_GER}</a></span></div></td>
+                      </tr>
+                    </table>
+                    <br>
+                  </div>
+                  {TABELALISTA}
+                </form>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <br>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="5" class="rodape-table">
+    <tr>
+      <td>
+        <div align="center">
+          {RODAPE}
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  {MODALCOMP}
+
+</body>
+</html>
+
+
+<!-- {URL_UPLOAD} {TEMA} -->

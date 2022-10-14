@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Lato_Bold';
+    src: url('../fonts/Lato-Bold.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Lato_Semibold';
+    src: url('../fonts/Lato-Semibold.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Lato_Regular';
+    src: url('../fonts/Lato-Regular.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Lato_Medium';
+    src: url('../fonts/Lato-Medium.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Lato_Heavy';
+    src: url('../fonts/Lato-Heavy.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'Roboto_Bold';
+    src: url('../fonts/Roboto-Bold.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Roboto_Regular';
+    src: url('../fonts/Roboto-Regular.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+    font-family: 'Roboto_Medium';
+    src: url('../fonts/Roboto-Medium.ttf'); /* IE9 Compat Modes */
+}

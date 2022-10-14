@@ -1,0 +1,2970 @@
+@import "/includes/fonts.css";
+
+/*******************************************************************************
+ * RESET DE PROPRIEDADES GERAIS                                        - IN�CIO 
+ ******************************************************************************/
+html, body{
+    width: 100%;
+    height: 100vh;
+    padding: 0px;    
+    /*position: relative;*/
+    margin: 0px;
+}
+
+header{
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+section, footer{
+    float: left;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+
+tr {display: table;  width:100%;}
+td {display: table-row;}
+/*******************************************************************************
+ * RESET DE PROPRIEDADES GERAIS                                           - FIM  
+ ******************************************************************************/
+
+header#topo_capa{
+    width: 100%;
+    padding-bottom: 40px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    border-top: solid 10px #1D5948;
+    background-color: #D8E7E5;
+}
+
+header#topo_capa #topo_esquerdo{
+    float: left;
+    width: 100%;
+}
+
+header#topo_capa #topo_esquerdo .logo_topo{
+    float: left;
+    width: 206px;
+    height: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../..//imagens/logo.png');
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+header#topo_capa #menu_click{
+    float: right;
+    width: 55px;
+    height: 55px;
+    margin-top: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+header#topo_capa #menu_click .menu_icon{
+    width: 55px;
+    height: 55px;
+    float: left;
+    background-color: #1D5948;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../..//imagens/menu_icon.png');
+    border-radius: 3px;
+}
+
+.menu_active header#topo_capa #menu_click .menu_icon{
+    background-image: url('../..//imagens/close_menu.png');
+}
+
+header#topo_capa #menu{
+    width: 100%;
+    float: left;
+    display: none;
+}
+
+.menu_active header#topo_capa #menu{
+    display: block !important;
+}
+
+header#topo_capa #menu ul{
+    padding: 0;
+    list-style: none;
+    float: left;
+    border-top: solid 1px #8B8B8B;
+}
+
+header#topo_capa #menu ul li{
+    height: 45px;
+    text-align: center;
+    margin: 0;
+    float: left;
+    line-height: 45px;
+    width: 100%;
+    font-family: 'Roboto_Medium';
+    font-size: 17px;
+    border-bottom: solid 1px #8B8B8B;
+    color: #15644E;
+}
+
+header#topo_capa #menu ul li:hover{
+    border-bottom: 0;
+    border-top: solid 1px #15644E;
+    font-family: 'Roboto_Bold';
+}
+
+#escurecedor{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 9999999;
+    display: none;
+}
+
+.area_restrita_active #escurecedor{
+    display: block;
+}
+
+#escurecedor #close_area_restrita{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../..//imagens/close_branco.svg');
+}
+
+#area_restrita{
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    height: 300px;
+    margin-top: 20vh;
+    position: absolute;
+    z-index: 9999999;
+    background-color: #1d5948;
+}
+
+#area_restrita .titulo_area_restrita{
+    float: left;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto_Medium';
+    font-size: 18px;
+}
+
+#area_restrita form{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+}
+
+#area_restrita form .icone{
+    float: left;
+    height: 40px;
+    width: 40px;
+    background-color: #E5EFEC;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#area_restrita form .icone_login{
+    background-image: url('../..//imagens/usuario_icon.png');
+}
+
+#area_restrita form .icone_pass{
+    background-image: url('../..//imagens/senha_icon.png');
+}
+
+#area_restrita form input{
+    float: left;
+    width: calc(100% - 40px);
+    height: 40px;
+    background-color: #fff;
+    color: #7f7f7f;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    margin-bottom: 15px;
+    font-size: 17px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#area_restrita form input::placeholder{
+    color: #7f7f7f;
+    opacity: 1;
+    font-size: 17px;
+}
+
+#area_restrita form input#entrar{
+    float: right;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    border: 0;
+    border-radius: 1px;
+    background-color: #E5EFEC;
+    font-size: 17px;
+    line-height: 35px;
+    font-family: 'Roboto_Medium';
+    color: #1D5948;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#area_restrita .infos{
+    float: left;
+    color: #fff;
+    font-family: 'Roboto_Regular';
+    font-size: 15px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+#area_restrita .infos #perdeu_sua_senha{
+    float: right;
+    color: #fff;
+    font-family: 'Roboto_Regular';
+    font-size: 17px;
+    cursor: pointer;
+    line-height: 35px;
+}
+
+#area_restrita #msg_formulario{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Roboto_Regular';
+    font-size: 17px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+}
+
+
+
+/*******************************************************************************
+ * TOPO                                                                   - FIM  
+ ******************************************************************************/
+
+
+
+/*******************************************************************************
+ * CAPA                                                                - IN�CIO  
+ ******************************************************************************/
+
+
+section .titulo_capa{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    border-radius: 2px;
+    font-family: 'Roboto_Medium';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 32px;
+}
+
+section .veja_mais{
+    float: left;
+    width: 136px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: calc(50% - 68px);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #25705B;
+    font-size: 18px;
+    font-family: 'Lato_Bold';
+    margin-top: 40px;
+}
+
+.divisao_capa{
+    float: left;
+    width: 100%;
+    height: 21px;
+    margin-top: 45px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url('../imagens/divisao_capa.png');
+}
+
+.divisao_capa_cinza{
+    float: left;
+    width: 100%;
+    height: 6px;
+    margin-top: 45px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url('../imagens/divisao_capa_cinza.png');
+}
+
+section#noticias{
+    float: left;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #fff;
+}
+
+section#noticias .busca{
+    float: left;
+    width: calc(100% - 40px);
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+section#noticias .busca form{
+    float: left;
+    width: 100%;
+    height: 35px;
+}
+
+
+section#noticias .busca form input::placeholder{
+    color: #fff;
+}
+
+section#noticias .busca form input#busca{
+    float: left;
+    width: calc(100% - 35px);
+    height: 35px;
+    border: 0;
+    background-color: #8B8B8B;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    line-height: 35px;
+}
+
+section#noticias .busca form input#btn_buscar{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #666;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../..//imagens/lupa.png');
+    border: 0;
+    cursor: pointer;
+}
+
+section#noticias .noticias{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+section#noticias .noticias .noticia{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+section#noticias .noticias .noticia .imagem_noticia{
+    float: left;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 79%;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+    -moz-box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+    box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+}
+
+section#noticias .noticias .noticia .publicado_em{
+    float: left;
+    width: 100%;
+    color: #808080;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+section#noticias .noticias .noticia .titulo_noticia{
+    float: left;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: 'Roboto_Bold';
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+section#noticias .noticias .noticia .linha_fina_noticia{
+    display: none;
+}
+
+section#a_empresa{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 70px;
+}
+
+section#a_empresa .foto_sindisea{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding-bottom: 57%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../..//imagens/a_empresa_capa.png');
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+section#a_empresa .texto_sindisea{
+    color: #4D4D4D;
+    font-family: 'Lato_Regular';
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    float: left;
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+section#onde_estamos{
+    float: left;
+    padding-top: 30px;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: solid 5px #BEBEBE;
+}
+
+
+section#onde_estamos .endereco{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 25px;
+    background-image: url('../..//imagens/pin.png');
+    background-repeat: no-repeat;
+    background-size: 13px 18px;
+    background-position: left top;
+}
+
+section#onde_estamos .endereco p{
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 17px;
+    color: #666;
+    width: calc(100% - 20px);
+}
+
+section#onde_estamos .mapa{
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    height: 220px;
+}
+
+section#redes_sociais{
+    float: left;
+    width: 100%;
+    background-color: #666;
+    padding-top: 20px;
+}
+
+section#redes_sociais .titulo_capa{
+    padding: 0;
+    float: left;
+    width: 176px;
+    margin-left: calc(50% - 88px);
+    height: 24px;
+    line-height: 24px;
+    border-left: solid 2px #fff;
+    border-right: solid 2px #fff;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+section#redes_sociais .box_redes{
+    float: left;
+    width: 234px;
+    margin-left: calc(50% - 117px);
+    margin-bottom: 35px;
+}
+
+section#redes_sociais .box_redes a{
+    float: left;
+}
+
+section#redes_sociais .icon_rodape{
+    float: left;
+    width: 66px;
+    height: 66px;
+    margin-top: 35px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+section#redes_sociais .facebook_icon{
+    background-image: url('../..//imagens/facebook_capa.png');
+}
+
+section#redes_sociais .twitter_icon{
+    margin-left: 18px;
+    margin-right: 18px;
+    background-image: url('../..//imagens/twitter_capa.png');
+}
+
+section#redes_sociais .instagram_icon{
+    background-image: url('../..//imagens/instagram_capa.png');
+}
+
+
+/*******************************************************************************
+ * CAPA                                                                   - FIM  
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * RODAPE                                                              - IN�CIO  
+ ******************************************************************************/
+
+/*COOKIE*/
+@keyframes slidein {
+    from {
+        bottom: -400px;
+        left: 0;
+    }
+  
+    to {
+        bottom: 0;
+        left: 0;
+    }
+  }
+.cookie{
+    position: fixed;
+    z-index: 99999999 !important;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px 15px 0 0 ;
+    border: 2px solid #005F4A;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto_Regular';
+    animation-duration: 3s;
+    animation-name: slidein;
+
+}
+.cookie p{
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.botoes-cookie{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.botoes-cookie button{
+    padding: 0.5rem 0.25rem;
+    background: transparent;
+    border: 1px solid #005F4A;
+    color: #005F4A;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.botoes-cookie button:hover{
+    padding: 0.5rem 0.25rem;
+    background: #005F4A;
+    border: 1px solid #005F4A;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+/*COOKIE*/
+
+footer{
+    float: left;
+    width: 100%;
+}
+
+footer .imagem_rodape{
+    float: left;
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../imagens/img_rodape.png');
+}
+
+footer .imagem_rodape .filie_se{
+    float: left;
+    background-color: #3085CC;
+    border-radius: 4px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    font-family: 'Lato_Heavy';
+    width: 220px;
+    margin-top: 195px;
+    margin-left: calc(50% - 110px);
+}
+
+footer .lado_esquerdo{
+    float: left;
+    width: 100%;
+    background-color: #1D5948;
+}
+
+footer .lado_esquerdo .logo_rodape{
+    float: left;
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../..//imagens/logo_rodape.png');
+}
+
+footer .lado_esquerdo .box_contato{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 28px
+}
+
+footer .lado_esquerdo .box_contato p{
+    float: left;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    margin-left: 20px;
+    font-family: 'Lato_Medium';
+    font-size: 14px;
+    margin-top: -3px;
+}
+
+footer .lado_esquerdo .box_contato .endereco{
+    float: left;
+    width: 100%;
+    background-image: url('../..//imagens/pin_rodape.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+footer .lado_esquerdo .box_contato .fone{
+    float: left;
+    width: 100%;
+    background-image: url('../..//imagens/telefone_rodape.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+footer .lado_esquerdo .box_contato .email{
+    width: 100%;
+    float: left;
+    background-image: url('../..//imagens/email_rodape.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+footer .lado_esquerdo .links_uteis{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 33px;
+}
+
+
+footer .lado_esquerdo .links_uteis .titulo_links_uteis{
+    float: left;
+    width: calc(100% - 10px);
+    border-radius: 1px;
+    border-left: solid 2.5px #fff;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    font-family: 'Roboto_Medium';
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+footer .lado_esquerdo .links_uteis ul{
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 18px;
+}
+
+footer .lado_esquerdo .links_uteis ul li{
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Lato_Regular';
+    font-size: 15px;
+}
+
+footer .lado_esquerdo .links_uteis ul li:hover{
+    color: #33CB98;
+    font-family: 'Lato_Bold';
+    font-size: 15px;    
+}
+
+footer .logo_ed{
+    float: left;
+    width: 98px;
+    height: 17px;
+    background-repeat: no-repeat;
+    margin-left: calc(50% - 49px);
+    background-size: contain;
+    background-position: center;
+    background-image: url('../..//imagens/logo_ed.png');
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+/*******************************************************************************
+ * RODAPE                                                                 - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * 2NIVEL                                                              - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel{
+    float: left;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding-top: 60px;
+}
+
+section#conteudo_2nivel .titulo{
+    float: left;
+    width: calc(100% - 20px);
+    min-height: 50px;
+    line-height: 50px;
+    color: #333;
+    border-radius: 2px;
+    font-family: 'Roboto_Medium';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+section#conteudo_2nivel .texto_pagina{
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Lato_Regular';
+    color: #4D4D4D;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+section#conteudo_2nivel .texto_pagina img{
+    float: left;
+    max-width: 100%;
+}
+
+section#conteudo_2nivel .texto_pagina .titulo{
+    float: left;
+    width: calc(100% - 20px);
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    margin-top: 70px;
+    border-radius: 2px;
+    font-family: 'Roboto_Medium';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+
+/*******************************************************************************
+ * 2NIVEL                                                                - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * NOTICIA_HISTORICO                                                   - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel .texto_pagina #noticias_historico{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .busca{
+    float: left;
+    width: 100%;
+    height: 35px;
+
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .busca form{
+    float: left;
+    width: 100%;
+    height: 35px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .busca form input::placeholder{
+    color: #fff;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .busca form input#busca{
+    float: left;
+    width: calc(100% - 35px);
+    height: 35px;
+    border: 0;
+    background-color: #8B8B8B;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    line-height: 35px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .busca form input#btn_buscar{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #666;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../..//imagens/lupa.png');
+    border: 0;
+    cursor: pointer;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .sem_noticias{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias .noticia{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias .noticia .imagem_noticia{
+    float: left;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 79%;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+    -moz-box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+    box-shadow: 10px 10px 40px -14px rgba(51,51,51,0.2);
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias .noticia .publicado_em{
+    float: left;
+    width: 100%;
+    color: #808080;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias .noticia .titulo_noticia{
+    float: left;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: 'Roboto_Bold';
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+section#conteudo_2nivel .texto_pagina #noticias_historico .noticias .linha_fina_noticia{
+    display: none;
+}
+
+/*******************************************************************************
+ * NOTICIA_HISTORICO                                                      - FIM  
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * NOTICIA                                                             - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #noticia_exibe{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #noticia_exibe .tags_noticia{
+    float: left;
+    width: 100%;
+    height: 17px;
+    background-image: url('../..//imagens/tag_icon.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+section#conteudo_2nivel #noticia_exibe .tags_noticia p{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    color: #4E4E4E;
+    font-family: 'Lato_Regular';
+    font-size: 18px;
+    margin-top: -3px;
+}
+
+section#conteudo_2nivel #noticia_exibe .tags_noticia p input{
+    float: left;
+    margin-right: 20px;
+    color: #4E4E4E;
+    font-family: 'Lato_Regular';
+    border: none;
+    background-color: #fff;
+    color: #38695e;
+}
+
+section#conteudo_2nivel #noticia_exibe .busca{
+    float: left;
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel #noticia_exibe .busca form{
+    float: left;
+    width: 100%;
+    height: 35px;
+}
+
+
+section#conteudo_2nivel #noticia_exibe .busca form input::placeholder{
+    color: #fff;
+}
+
+section#conteudo_2nivel #noticia_exibe .busca form input#busca{
+    float: left;
+    width: calc(100% - 35px);
+    height: 35px;
+    border: 0;
+    background-color: #8B8B8B;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    line-height: 35px;
+}
+
+section#conteudo_2nivel #noticia_exibe .busca form input#btn_buscar{
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #666;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../..//imagens/lupa.png');
+    border: 0;
+    cursor: pointer;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .foto_noticia{
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-top: 79%;
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .foto_noticia #leg_foto{
+    width: 100%;
+		float: left;
+		
+    font-size: 13px;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .box_lado_foto{
+    width: 100%;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .titulo_noticia{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Roboto_Medium';
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .data_noticia{
+    width: 100%;
+    float: left;
+    color: #1D5948;
+    font-family: 'Roboto_Regular';
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia .texto_noticia{
+    float: left;
+    width: 100%;
+    color: #4D4D4D;
+    margin-top: 20px;
+    font-family: 'Lato_Regular';
+    font-size: 16px;
+    text-align: justify;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar{
+    float: left;
+    margin-top: 40px;
+    width: 264px;
+    margin-left: calc(50% - 132px);
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .share{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar a{
+    float: left;
+}
+
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .email{
+    background-image: url('../..//imagens/share_email.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .email:hover{
+    background-image: url('../..//imagens/share_email_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .insta{
+    background-image: url('../..//imagens/share_insta.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .insta:hover{
+    background-image: url('../..//imagens/share_insta_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .facebook{
+    background-image: url('../..//imagens/share_facebook.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .facebook:hover{
+    background-image: url('../..//imagens/share_facebook_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .twitter{
+    background-image: url('../..//imagens/share_twitter.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .twitter:hover{
+    background-image: url('../..//imagens/share_twitter_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .google{
+    background-image: url('../..//imagens/share_google.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .google:hover{
+    background-image: url('../..//imagens/share_google_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .tumbler{
+    background-image: url('../..//imagens/share_tumbler.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .tumbler:hover{
+    background-image: url('../..//imagens/share_tumbler_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .linkedin{
+    background-image: url('../..//imagens/share_linkedin.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .linkedin:hover{
+    background-image: url('../..//imagens/share_linkedin_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .behance{
+    background-image: url('../..//imagens/share_behance.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .behance:hover{
+    background-image: url('../..//imagens/share_behance_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .pinterest{
+    background-image: url('../..//imagens/share_pinterest.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .pinterest:hover{
+    background-image: url('../..//imagens/share_pinterest_2.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .print{
+    background-image: url('../..//imagens/share_print.png');
+}
+
+section#conteudo_2nivel #noticia_exibe .noticia #share_bar .print:hover{
+    background-image: url('../..//imagens/share_print_2.png');
+}
+
+section#conteudo_2nivel #galeria_noticia{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #galeria_noticia .titulo_galeria_noticia{
+    float: left;
+    width: calc(100% - 20px);
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    border-radius: 2px;
+    font-family: 'Roboto_Medium';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 29px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+section#conteudo_2nivel #galeria_noticia .lightgallery1{
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel #galeria_noticia li{
+    width: calc(100% / 3 - 5px);
+    height: calc(100vw / 5);
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+section#conteudo_2nivel #galeria_noticia li .foto_galeria{
+    width: 100%;
+    height: calc(100vw / 5);
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section#conteudo_2nivel #mais_noticias{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #mais_noticias .titulo_outras_noticias{
+    float: left;
+    width: calc(100% - 20px);
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    border-radius: 2px;
+    font-family: 'Roboto_Medium';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias{
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias .noticia{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias .noticia .imagem_noticia{
+    float: left;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 79%;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 40px -14px rgba(51,51,51,1);
+    -moz-box-shadow: 10px 10px 40px -14px rgba(51,51,51,1);
+    box-shadow: 10px 10px 40px -14px rgba(51,51,51,1);
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias .noticia .publicado_em{
+    float: left;
+    width: 100%;
+    color: #808080;
+    font-family: 'Roboto_Medium';
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias .noticia .titulo_noticia{
+    float: left;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: 'Roboto_Bold';
+    font-size: 19px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+section#conteudo_2nivel #mais_noticias .outras_noticias .noticia .linha_fina_noticia{
+    display: none;
+}
+
+
+/*******************************************************************************
+ * NOTICIA                                                                - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * O SINDIASEA                                                         - INICIO  
+ ******************************************************************************/
+
+
+section#conteudo_2nivel .o_sindiasea{
+    float: left;
+    width: 100%;
+}
+
+
+section#conteudo_2nivel .o_sindiasea .foto_a_empresa{
+    float: left;
+    width: 100%;
+    padding-bottom: 57%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../..//imagens/a_empresa_capa.png');
+    margin-bottom: 20px;
+}
+
+section#conteudo_2nivel .o_sindiasea .conteudo_a_empresa{
+    position: relative;
+}
+section#conteudo_2nivel .o_sindiasea .divisao_2nivel{
+    width: 100vw;
+    margin-left: -20px;
+    height: 1px;
+    border-bottom: solid 3px #1D5948;
+    margin-top: 40px;
+    float: left;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 45px;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item{
+    float: left;
+    width: 286px;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .icone{
+    float: left;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 70px;
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .missao{
+    background-image: url('../..//imagens/missao.png');
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .visao{
+    background-image: url('../..//imagens/visao.png');
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .valores{
+    background-image: url('../..//imagens/valores.png');
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .titulo_item{
+    float: left;
+    width: 130px;
+    border-left: solid 4px #1D5948;
+    border-right: solid 4px #1D5948;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: calc(50% - 65px);
+    font-family: 'Roboto_Medium';
+    font-size: 24px;
+    color: #333;
+    margin-top: 25px;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .conteudo_item{
+    float: left;
+    width: 100%;
+    text-align: justify;
+    margin-top: 25px;
+}
+
+section#conteudo_2nivel .o_sindiasea .mvv .item .conteudo_item ul{
+    width: calc(100% - 80px);
+    margin-left: 40px;
+}
+
+section#conteudo_2nivel .o_sindiasea .divisao_2nivel_cinza{
+    float: left;
+    width: 100vw;
+    margin-left: -20px;
+    height: 1px;
+    border-bottom: solid 3px #8B8B8B;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .titulo{
+    height: auto !important;
+}
+
+
+section#conteudo_2nivel .o_sindiasea .diretoria .conteudo_diretoria{
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .conteudo_diretoria h1{
+    float: left;
+    width: calc(100% - 20px);
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    border-radius: 2px;
+    font-family: 'Roboto_Regular';
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    font-size: 22px;
+}
+
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaboradores{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaboradores .titulo_gestao{
+    float: left;
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Roboto_Medium';
+    font-size: 28px;
+    border-radius: 5px;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaborador{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaborador .foto_colaborador{
+    width: calc(100% - 50px);
+    border: solid 25px #666;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100%;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaborador .funcao{
+    float: left;
+    color: #333;
+    font-family: 'Lato_Heavy';
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    background-color: #ddd;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaborador .nome{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Lato_Medium';
+    font-size: 20px;
+    background-color: #ddd;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+section#conteudo_2nivel .o_sindiasea .diretoria .colaborador .ver_gestao{
+    float: left;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #15644E;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'Lato_Heavy';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+section#conteudo_2nivel .fundo_escuro{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 99999999;
+    display: none;
+}
+
+section#conteudo_2nivel #outros_colaboradores{
+    position: fixed;
+    width: 90vw;
+    left: 5vw;
+    height:90vh;
+    top: 5vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 10px;
+    border: solid 1px #143D32;
+    -webkit-box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    z-index: 999999999;
+}
+
+/* width */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+/* Handle */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+/* Handle on hover */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+section#conteudo_2nivel #close_outros_colaboradores{
+    position: absolute;
+    z-index: 999999;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../..//imagens/close.png');
+}
+
+section#conteudo_2nivel #texto_outros_colaboradores{
+    float: left;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    color: #333;
+    font-family: 'Lato_Regular';
+    margin-top: 50px;
+}
+
+
+section#conteudo_2nivel .o_sindiasea .estatuto{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .o_sindiasea .estatuto .titulo{
+    height: auto !important;
+}
+
+section#conteudo_2nivel .o_sindiasea .estatuto .conteudo_estatuto{
+    float: left;
+    width: 100%;
+    margin-top: 55px;
+    font-family: 'Lato_SemiBold';
+    font-size: 20px;
+    color: #4D4D4D;
+}
+
+section#conteudo_2nivel .o_sindiasea .estatuto .download_estatuto{
+    float: left;
+    width: 100%;
+    height: 35px;
+    background-color: #0F4738;
+    border-radius: 3px;
+    -webkit-box-shadow: 7px 10px 20px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 7px 10px 20px -5px rgba(0,0,0,0.2);
+    box-shadow: 7px 10px 20px -5px rgba(0,0,0,0.2);
+    margin-top: 40px;
+}
+
+section#conteudo_2nivel .o_sindiasea .estatuto .download_estatuto .pdf_icon{
+    float: left;
+    width: 30px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../..//imagens/pdf.png');
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+section#conteudo_2nivel .o_sindiasea .estatuto .download_estatuto p{
+    width: calc(100% - 30px);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    font-family: 'Lato_Heavy';
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/*******************************************************************************
+ *  O SINDIASEA                                                           - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * CONTATO                                                             - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_contato{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_contato form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_contato form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_contato form input{
+    float: left;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 20px;
+    font-family: 'Lato_Regular';
+    font-size: 19px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_contato form textarea{
+    float: left;
+    width: 100%;
+    height: 90px;
+    padding-top: 5px;
+    resize: none;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_contato form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_contato form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 17px;
+    border-radius: 2px;
+}
+
+section#conteudo_2nivel #formulario_contato form .form_botao #msg_formulario{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 15px;
+    height: 30px;
+}
+
+
+section#conteudo_2nivel .onde_estamos{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+}
+
+section#conteudo_2nivel .onde_estamos .endereco{
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    background-image: url('../..//imagens/pin.png');
+    background-repeat: no-repeat;
+    background-size: 13px 18px;
+    background-position: left top;
+}
+
+section#conteudo_2nivel .onde_estamos .endereco p{
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: -2px;
+    font-size: 17px;
+    color: #666;
+}
+
+section#conteudo_2nivel .onde_estamos .mapa{
+    float: left;
+    width: 100vw;
+    margin-left: -20px;
+    height: 220px;
+    margin-top: 15px;
+}
+
+/*******************************************************************************
+ * CONTATO                                                                - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * CONVENIOS                                                           - INICIO  
+ ******************************************************************************/
+
+
+section#conteudo_2nivel .convenios{
+    float: left;
+    width: 100%;
+}
+
+
+section#conteudo_2nivel .convenios .convenio{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+section#conteudo_2nivel .convenios .convenio .foto_convenio{
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: solid 25px #666;
+    border-radius: 2px;
+    background-color: #fff;
+    background-position: center;
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    padding: 15px;
+}
+
+section#conteudo_2nivel .convenios .convenio .nome_convenio{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Roboto_Medium';
+    font-size: 27px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel .convenios .convenio .descricao_convenio{
+    float: left;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: 'Lato_Regular';
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: justify;
+}
+
+section#conteudo_2nivel .convenios .convenio .descricao_convenio p{
+    margin: 0;
+    padding: 0;
+}
+
+/*******************************************************************************
+ * CONVENIOS                                                              - FIM  
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * COLABORADORES                                                       - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel .colaboradores{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .colaboradores{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .colaboradores .titulo_gestao{
+    float: left;
+    width: calc(100% - 20px);
+    padding-left: 20px;
+    border-left: solid 4px #1D5948;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Roboto_Medium';
+    font-size: 28px;
+    border-radius: 5px;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+section#conteudo_2nivel .gestores{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel .colaboradores .gestores .colaborador{
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+section#conteudo_2nivel .colaboradores .gestores .colaborador .foto_colaborador{
+    width: calc(100% - 50px);
+    border: solid 25px #666;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100%;
+}
+
+section#conteudo_2nivel .colaboradores .gestores .colaborador .funcao{
+    float: left;
+    color: #333;
+    font-family: 'Lato_Heavy';
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    background-color: #ddd;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+section#conteudo_2nivel .colaboradores .gestores .colaborador .nome{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Lato_Medium';
+    font-size: 20px;
+    background-color: #ddd;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+section#conteudo_2nivel .colaboradores .gestores .colaborador .ver_gestao{
+    float: left;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #15644E;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'Lato_Heavy';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+section#conteudo_2nivel .fundo_escuro{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 99999999;
+    display: none;
+}
+
+section#conteudo_2nivel #outros_colaboradores{
+    position: fixed;
+    width: 90vw;
+    left: 5vw;
+    height:90vh;
+    top: 5vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 10px;
+    border: solid 1px #143D32;
+    -webkit-box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    box-shadow: 10px 6px 84px -21px rgba(0,0,0,0.75);
+    z-index: 999999999;
+}
+
+/* width */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+/* Handle */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+/* Handle on hover */
+section#conteudo_2nivel #outros_colaboradores::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+section#conteudo_2nivel #close_outros_colaboradores{
+    position: absolute;
+    z-index: 999999;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../..//imagens/close.png');
+}
+
+section#conteudo_2nivel #texto_outros_colaboradores{
+    float: left;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    color: #333;
+    font-family: 'Lato_Regular';
+    margin-top: 50px;
+}
+
+/*******************************************************************************
+ * COLABORADORES                                                          - FIM  
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * FILIE-SE                                                            - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_filiacao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_filiacao form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_filiacao form .box_item_form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_filiacao form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_filiacao form input{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 20px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_filiacao form select{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+
+
+section#conteudo_2nivel .box_termos{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel .box_termos .termos_titulo{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Lato_Bold';
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+section#conteudo_2nivel .box_termos #termoss{
+    width: 100%;
+    overflow-y: scroll;
+    height: 200px;
+    font-family: 'Lato_Regular';
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px #666;
+}
+
+section#conteudo_2nivel #termos_checkbox {
+    width: auto !important;
+    height: auto !important;
+}
+
+section#conteudo_2nivel #termos {
+    width: auto !important;
+}
+
+section#conteudo_2nivel #formulario_filiacao form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_filiacao form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+section#conteudo_2nivel #formulario_filiacao form .form_botao #msg_formulario2{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 17px;
+    height: 40px;
+}
+
+/*******************************************************************************
+ * FILIE-SE                                                               - FIM  
+ ******************************************************************************/
+
+
+
+/*******************************************************************************
+ * AREA RESTRITA                                                       - INICIO  
+ ******************************************************************************/
+
+
+section#conteudo_2nivel select#aba{
+    float: left;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #1D5948;
+    color: #fff;
+}
+
+section#conteudo_2nivel #arquivos{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos{
+    float: left;
+    width: calc(100% - 30px);
+    border: solid 1px #15644E;
+    border-top-right-radius: 15px;
+    padding: 15px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 2;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos form select{
+    
+    float: left;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    border: solid 1px #25705B;
+    margin-right: 20px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete{
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete .data_balancete{
+    float: left;
+    width: 100%;
+    color: #333;
+    font-family: 'Lato_Bold';
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete .arquivo{
+    float: left;
+    width: 100%;
+    height: 30px;
+    font-family: 'Lato_Semibold';
+    font-size: 16px;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../..//imagens/pdf.png');
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete .arquivo span{
+    margin-left: 30px;
+    font-family: 'Lato_Semibold';
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete .arquivo_img{
+    float: left;
+    width: 100%;
+    height: 30px;
+    font-family: 'Lato_Semibold';
+    font-size: 16px;
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../..//imagens/picture.png');
+    margin-top: 20px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .balancete .arquivo_img span{
+    margin-left: 30px;
+    font-family: 'Lato_Semibold';
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos a{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .arquivo_download{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos span{
+    float: left;
+    width: 100%;
+    height: auto;
+    color: #333;
+    font-family: Lato_Regular;
+    font-size: 16px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .nome_arquivo{
+    float: left;
+    width: 100%;
+    background-image: url('../..//imagens/download_icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    height: 20px;
+    margin-top: 5px;
+}
+
+section#conteudo_2nivel #arquivos #lista_arquivos .nome_arquivo span{
+    float: left;
+    width: calc(100% - 35px);
+    height: auto;
+    color: #333;
+    font-family: Lato_Regular;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 35px;
+}
+
+/*******************************************************************************
+ * AREA RESTRITA                                                          - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * ALTERAR DADOS                                                       - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_alterar_dados{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form .box_item_form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form input{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 20px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form select{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 20px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+section#conteudo_2nivel #formulario_alterar_dados form .form_botao #msg_formulario{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+/*******************************************************************************
+ * ALTERAR DADOS                                                          - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * PERDEU SENHA                                                        - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_esqueceu_senha{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form input{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+section#conteudo_2nivel #formulario_esqueceu_senha form .form_botao #msg_formulario{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+/*******************************************************************************
+ * PERDEU SENHA                                                           - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * ALTERAR SENHA                                                       - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_alterar_senha{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form input{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+section#conteudo_2nivel #formulario_alterar_senha form .form_botao #msg_formulario{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+/*******************************************************************************
+ * ALTERAR SENHA                                                          - FIM  
+ ******************************************************************************/
+
+/*******************************************************************************
+ * FORMUL�RIO LOGIN                                                    - INICIO  
+ ******************************************************************************/
+
+section#conteudo_2nivel #formulario_login{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_login form{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_login form label{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Bold';
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+section#conteudo_2nivel #formulario_login form input{
+    float: left;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 2px;
+    border: solid 1px #4d4d4d;
+    margin-bottom: 30px;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section#conteudo_2nivel #formulario_login form .form_botao{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #formulario_login form .form_botao #botao-enviar{
+    background-color: #143D32;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+}
+
+section#conteudo_2nivel #formulario_login form .form_botao #msg_formulario{
+    float: left;
+    width: 100%;
+    font-family: 'Lato_Semibold';
+    color: #005F4A;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+/*******************************************************************************
+ * FORMUL�RIO LOGIN                                                       - FIM  
+ ******************************************************************************/
+
+
+/*******************************************************************************
+ * GALERIA                                                             - INICIO 
+ ******************************************************************************/
+
+section#conteudo_2nivel #lista_galerias{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #lista_galerias .titulo{
+    margin-bottom: 50px;
+}
+
+section#conteudo_2nivel #lista_galerias .galerias{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #lista_galerias .box_galeria{
+    float: left;
+    width: 100%;
+}
+
+section#conteudo_2nivel #lista_galerias .galeria{
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+section#conteudo_2nivel #lista_galerias .galeria .destaque_galeria{
+    float: left;
+    width: 100%;
+    height: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+section#conteudo_2nivel #lista_galerias .box_galeria .titulo_galeria{
+    float: left;
+    width: 100%;
+    color: #777;
+    font-family: 'Lato_Regular';
+    font-size: 17px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+section#conteudo_2nivel .veja_mais_galerias{
+    width: 180px !important;
+    margin-top: 30px;
+    margin-left: calc(50% - 90px);
+}
+
+/*******************************************************************************
+ * GALERIA                                                                - FIM  
+ ******************************************************************************/
+
+ /** ELEI��O **/
+
+.processo_eleitoral {
+    text-align: center;
+    background: url("/imagens/processo-eleitoral.png") bottom center / cover no-repeat;
+    padding: 35px 0px 46px 0px;
+
+}
+
+.processo_eleitoral span {
+    font-family: 'Roboto_Medium';
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    border-right: solid 4px #1D5948;
+    border-left: solid 4px #1D5948;
+}
+
+.passos {
+    /*border-bottom: 4px solid #a5a5a5;*/
+    overflow: hidden;
+    padding-bottom: 10px;
+    /*margin-top: 30px;*/
+}
+
+.passos .passo {
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url("../imagens/seta_aguardo.svg");
+    padding-right: 10px;
+}
+
+.passos .passo.p1 {
+    width: 16%;
+}
+
+
+.passos .passo.p2 {
+    width: 16%;
+}
+
+
+.passos .passo.p3 {
+    width: 17%;
+}
+
+
+.passos .passo.p4 {
+    width: 25%;
+}
+
+
+.passos .passo.p5 {
+    width: 20%;
+}
+
+
+.passos .passo span {
+    color: #a5a5a5;
+}
+
+.passos .passo .numero {
+    font-family: 'Lato_Heavy';
+    font-size: 27px;
+}
+
+.passos .passo .texto {
+    font-family: 'Roboto_Bold';
+    font-size: 17px;
+}
+
+.passos .passo.ativo {
+    display: block;
+    margin-top: 0px;
+    background-image: url("../imagens/seta_proximo.svg");
+}
+
+.passos .passo.confirmado {
+    background-image: url("../imagens/seta_confirmado.svg");
+}
+
+.passos .passo.confirmado span {
+    color: #1D5949;
+
+}
+
+.passos .passo.ativo span {
+    color: #333;
+    text-transform: uppercase;
+}
+
+.passos .passo.ativo .numero {
+    font-size: 45px;
+}
+
+.eleicao {
+    padding: 10px 15px;
+}
+
+.eleicao .step.passo1 {
+    display: block;
+}
+
+.eleicao .step {
+    display: none;
+    overflow: hidden;
+}
+.eleicao .step p {
+    font-size: 20px;
+    color: #4d4d4d;
+    font-family: 'Lato_Medium';
+    margin-bottom: -20px;
+}
+
+.eleicao .titulo_eleicao {
+    font-size: 25px;
+    border-left: 4px solid #1d5949;
+    padding-left: 20px;
+    font-family: 'Roboto_Medium';
+}
+
+.eleicao .texto {
+    font-family: "Lato_Regular";
+    font-size: 17px;
+    color: #4d4d4d;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.eleicao .bloco {
+}
+
+.eleicao form {
+}
+
+.eleicao label {
+    font-family: "Lato_Bold";
+    font-size: 19px;
+    color: #4d4d4d;
+}
+
+.eleicao input, .modal_eleicao input{
+    border: 1px solid #4d4d4d;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.eleicao .confirmar, .eleicao .reenviar, .botao_eleicao {
+    color: white;
+    border: none;
+    font-family: "Lato_Bold";
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #1d5949;
+    cursor: pointer;
+}
+
+.eleicao .passo2 {
+    margin-bottom: 30px;
+}
+
+.eleicao .passo2 .bloco {
+}
+
+.eleicao .passo2 form {
+}
+
+.eleicao .passo2 .img {
+    background: url(/imagens/relogio.svg) no-repeat;
+    background-position: center top;
+    background-size: contain;
+    float: left;
+    height: 228px;
+    text-align: center;
+    font-family: 'Lato_Bold';
+    font-size: 50px;
+    color: #1d5949;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.eleicao .passo2 .img .time {
+    margin-top: -63px;
+}
+
+.eleicao .passo2 .btn_reenvia {
+    background-color: #bce2c6;
+    padding: 10px;
+    font-size: 19px;
+    color: #1D5948;
+    font-family: 'Lato_Medium';
+    margin: 20px 40px 0px 0px;
+}
+
+.eleicao .passo3 .chapa, .eleicao .passo4 .chapa{
+    width: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: 1px solid silver;
+    padding: 30px 0px;
+}
+
+.infos .img_chapa {
+    margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    background-color: #333333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+/*.chapa input[type=radio] {
+    float: left;
+    width: 100px;    
+    margin-top: 80px;
+}*/
+
+.chapa .info {
+    float: left;
+}
+
+.infos .texto_chapa {
+        margin-top: 20px;
+    clear: both;
+}   
+
+.infos .texto_chapa .nome_chapa {
+    font-size: 25px;
+    color: #4d4d4d;
+    font-family: 'Roboto_Medium';
+}
+
+.infos .texto_chapa .integrantes {
+    font-size: 20px;
+    color: #4d4d4d;
+    font-family: 'Lato_Medium';
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+    margin-top: 5px;
+    display: none;
+}
+
+.infos .texto_chapa .integrantes li {
+    margin-bottom: 10px;
+
+}
+
+.infos .texto_chapa .integrantes li:before {
+    content: '\25AA';
+    color: #1d5949; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+}
+
+.modal_eleicao{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.92);
+    top: 0;
+    display: none;
+	z-index: 99999999;
+}
+
+.modal_eleicao .conteudo_modal{
+	width: 280px;
+	margin: 0 auto;
+	margin-top: 40px;
+	
+}
+
+.modal_eleicao .conteudo_modal .confirmar{
+    margin-top: 40px;
+}
+
+.eleicao .msg_erro{
+    color: #f94141;
+    font-family: 'Roboto_Regular';
+    font-size: 16px;
+
+}
+
+/** CSS CHECKBOX **/
+
+.chapa {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.chapa input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    top: -5px;
+    height: 100%;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    float: left;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-top: 80px;
+    margin-right: 50px;
+}
+
+/* On mouse-over, add a grey background color */
+.chapa:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.chapa input:checked ~ .checkmark {
+    background-color: white;
+    border: 2px solid #1D5949;
+    height: 21px;
+    width: 21px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.chapa input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.chapa .checkmark:after {
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 19;
+    height: 19;
+    border-radius: 50%;
+    background: #1D5949;
+}

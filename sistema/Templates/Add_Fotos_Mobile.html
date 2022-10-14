@@ -1,0 +1,132 @@
+{CABECALHO}
+<head>
+  {META}
+
+  {CSS}
+
+  {JS}
+
+  {JAVASCRIPT}
+
+  {VALIDACAO}
+
+  {TITLE}
+
+  {COMPONENTES}
+
+  {MODAIS}
+
+  <!-- JavaScript Includes -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="componente_comum/fileupload/js/jquery.knob.js"></script>
+
+  <!-- jQuery File Upload Dependencies -->
+  <script type="text/javascript" src="componente_comum/fileupload/js/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="componente_comum/fileupload/js/jquery.iframe-transport.js"></script>
+  <scrip type="text/javascript"t src="componente_comum/fileupload/js/jquery.fileupload.js"></script>
+
+  <!-- Our main JS file -->
+  <script type="text/javascript" src="componente_comum/fileupload/js/script.js"></script>
+
+  <link href="componente_comum/fileupload/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body onload="document.form1.pesquisa.focus();">
+  <div class="lala" id="lala">
+    <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="90%" valign="top">
+                <img src="img/pixel.gif" width="100" height="110" />
+              </td>
+              <td width="10%" valign="top">
+                {NAV}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+              <td valign="top">
+
+                {MENU}
+
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                {TITULO_POST}
+
+                {HIDDENS}
+
+                {INFOACAO}
+
+                {PASSOS}
+
+                {FILTROS}
+
+                {FILTROS}
+
+                <!--<div align="center" style="margin-top:-40px;"><br>
+                  <table width="900" bgcolor="#ccc" border='0' cellpadding="0" cellspacing="0" >
+                    <tr bgcolor="#ffffff">                        
+                      <td width="25%" bgcolor="#ffffff" nowrap="nowrap"><div align="center"><span class="texto_nav"><img src="temas/{TEMA}/icones/gerenciar.png" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_GER_FOTO}">{TITULO_GER_FOTO}</a></span></div></td>
+                      <td width="25%" bgcolor="#ffffff" nowrap="nowrap"><div align="center"><span class="texto_nav"><img src="temas/{TEMA}/icones/ordenar.png" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_ORDENAR}">{TITULO_ORDENAR}</a></span></div></td> 
+                      <td width="25%" bgcolor="#ffffff" nowrap="nowrap"><div align="right"><span class="texto_nav"><img src="temas/{TEMA}/icones/voltar.png" width="15" align="absmiddle" border="0" height="15" hspace="1"> <a href="{LINK_VOLTA_GER}">{TITULO_VOLTA_GER}</a></span></div></td>                     
+                    </tr>
+                  </table>
+                  <br>
+                </div>-->
+
+                <form method="post" action="{URL_UPLOAD}" enctype="multipart/form-data">                   
+
+                  {TABELALISTA}
+
+                  <div align="center">
+                    <table width="800" bgcolor="#999999" cellpadding="10" cellspacing="0" border="0" style="outline: 0;">
+                      <tr bgcolor="#ffffff">
+                        <td nowrap="nowrap" align="center">                                                  
+                          {BOTAO1}
+                          {BOTAO2}
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  {PAGINACAO}
+                </form>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="5" class="rodape-table">
+    <tr>
+      <td>
+        <div align="center">
+          {RODAPE}
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+  {MODALCOMP}
+
+</body>
+</html>
+

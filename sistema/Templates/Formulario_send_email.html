@@ -1,0 +1,109 @@
+{CABECALHO}
+   <head>
+    {META}
+
+    {CSS}
+
+    {JS}
+
+    {JAVASCRIPT}
+
+    {VALIDACAO}
+
+    {TITLE}
+
+    {COMPONENTES}
+    
+    {MODAIS}
+   </head>
+   
+   <script type="text/JavaScript">
+       
+        function exibirEmailTeste(){
+        
+            var div1 = document.getElementById('email_teste_1');
+            var div2 = document.getElementById('email_teste_2');
+            if(document.form1.tipo_mailing.value == 99){
+                div1.style.visibility = 'visible';
+                div2.style.visibility = 'visible';
+            } else {
+                div1.style.visibility = 'hidden';
+                div2.style.visibility = 'hidden';
+            }
+       }
+        
+       
+   </script>
+
+
+
+<body>
+    <div class="lala" id="lala">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="90%" valign="top">
+                                <img src="img/pixel.gif" width="100" height="110">
+                            </td>
+                            <td width="10%" valign="top">
+                                {NAV}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <table width="100%" border="0" cellspacing="5" cellpadding="5">
+                        <tr>
+                            <td valign="top">
+
+                                {MENU}
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+
+                                <form name="form1" method="post" action="?" enctype="multipart/form-data">
+                                
+                                {HIDDENS}
+                                
+                                {INFOACAO}
+
+                                {TABELAFORM}
+
+
+
+                                </form>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                        <tr>
+                            <td>
+                                <div align="center">
+                                    {RODAPE}
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+{MODALCOMP}
+
+</body>
+</html>
+
+    
