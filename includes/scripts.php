@@ -170,15 +170,16 @@ $html_js .= '  <script type="text/javascript">
                         data: dados,
                         dataType: "json",
                         success: function (data){
-                            if (data["sucesso"] == 1){
+                            console.log(data.sucesso, data["sucesso"]);
+                            if (data["sucesso"] == 1 || data.sucesso == 1){
                                 $("#formFiliacao")[0].reset();
                                 msg = "Obrigado! Enviamos seu pedido para avaliação.";
                                 $("#msg_formulario2").text(msg);
                             } else {
-                                if (data["sucesso"] == 2){
+                                if (data["sucesso"] == 2 || data.sucesso == 2){
                                     $("#formFiliacao")[0].reset();
                                     msg = "CPF já cadastrado. Por favor, entre em contato com um administrador.";
-                                    $("#msg_formulario").text(msg);
+                                    $("#msg_formulario2").text(msg);
                                 } else {
                                     msg = "Falha no envio de email. Tente novamente!";
                                     $("#msg_formulario2").text(data);
