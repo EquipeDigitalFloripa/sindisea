@@ -2,50 +2,64 @@
 extract($vetor_conteudo);
 ?>
 <html>
-    <head>
-        <?php include('./includes/metatags.php'); ?>
 
-        <?php echo (isset($metas)) ? $metas : ""; ?>
+<head>
+    <?php include('./includes/metatags.php'); ?>
 
-        <link href="/includes/site.css" type="text/css" rel="stylesheet" >
-        <script src="/scripts/jquery-1.12.3.min.js" type="text/javascript"></script>
-        <script src="/scripts/jquery.mask.js" type="text/javascript"></script>
-        <script src="/scripts/jquery.validate.js" type="text/javascript"></script>
-        <?php require "includes/scripts.php"; ?> 
-        <?php echo $java_script; ?>
+    <?php echo (isset($metas)) ? $metas : ""; ?>
 
-        <script type="text/javascript">
+    <link href="/includes/site.css" type="text/css" rel="stylesheet">
+    <script src="/scripts/jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script src="/scripts/jquery.mask.js" type="text/javascript"></script>
+    <script src="/scripts/jquery.validate.js" type="text/javascript"></script>
+    <?php require "includes/scripts.php"; ?>
+    <?php echo $java_script; ?>
 
-            $(document).ready(function () {
-                $('#menu_click').click(function () {
-                    $('html').toggleClass("menu_active");
-                });
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#menu_click').click(function() {
+                $('html').toggleClass("menu_active");
+            });
 
-                $(".aba").click(function (event) {
-                    $(".aba").removeClass("aba_selecionada");
-                    $(this).addClass("aba_selecionada");
-                    var aba = $(this).text();
-                    jQuery.ajax({
-                        type: "POST",
-                        url: "webservice.php?acao=listar_arquivos&aba=" + aba,
-                        dataType: "json",
-                        success: function (data) {
-                            $('#lista_arquivos').html(data['lista_arquivos']);
-                        }
-                    });
-                });
-                $(".seta_opcoes").click(function (event) {
-                    $('html').toggleClass('ativa_opcoes');
+            $(".aba").click(function(event) {
+                $(".aba").removeClass("aba_selecionada");
+                $(this).addClass("aba_selecionada");
+                var aba = $(this).text();
+                jQuery.ajax({
+                    type: "POST",
+                    url: "webservice.php?acao=listar_arquivos&aba=" + aba,
+                    dataType: "json",
+                    success: function(data) {
+                        $('#lista_arquivos').html(data['lista_arquivos']);
+                    }
                 });
             });
-        </script>
+            $(".seta_opcoes").click(function(event) {
+                $('html').toggleClass('ativa_opcoes');
+            });
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7MDP9PB4T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-V7MDP9PB4T');
+    </script>
 
 </head>
+
 <body>
     <header id="topo_2nivel">
         <div class="centraliza_conteudo">
             <div id="topo_esquerdo">
-                <a href="/inicio"><div class="logo_topo"></div></a>
+                <a href="/inicio">
+                    <div class="logo_topo"></div>
+                </a>
                 <div id="menu_click">
                     <div class="menu_nome">MENU</div>
                     <div class="menu_icon"></div>
@@ -56,7 +70,12 @@ extract($vetor_conteudo);
             </div>
             <div id="topo_direito">
                 <div class="contato">
-                    <div class="fone"><p>(48) 99182 2462&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp</p></div><div class="email"><p>sindiasea@sindiasea.org.br</p></div>
+                    <div class="fone">
+                        <p>(48) 99182 2462&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp</p>
+                    </div>
+                    <div class="email">
+                        <p>sindiasea@sindiasea.org.br</p>
+                    </div>
                 </div>
 
                 <div id="area_cliente">
@@ -64,7 +83,7 @@ extract($vetor_conteudo);
                 </div>
             </div>
         </div>
-        
+
     </header>
 
     <section id="conteudo_2nivel">
@@ -75,11 +94,12 @@ extract($vetor_conteudo);
         </div>
     </section>
 
-    <footer>            
+    <footer>
         <?php include('./includes/rodape.php'); ?>
-    </footer>            
+    </footer>
 
 
     <?php include('./includes/google_analytics.php'); ?>
 </body>
+
 </html>
