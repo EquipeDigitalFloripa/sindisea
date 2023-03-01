@@ -114,7 +114,7 @@
         <div class="centraliza_conteudo">
             <div class="titulo_capa">ONDE ESTAMOS</div>
             <div class="endereco">
-                <p>R. Presidente Nereu Ramos, 69 - Edifício Bello Empresarial, Sala 204 - Centro, Florianópolis - SC, 88015-010</p>
+                <p>R. Presidente Nereu Ramos, 69 - Edifício Bello Empresarial, Sala 205 - Centro, Florianópolis - SC, 88015-010</p>
             </div>
         </div>
         <div class="mapa">
