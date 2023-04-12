@@ -118,7 +118,7 @@ class Eleicao_Add_View extends View {
          ****************INICIO
          */
         $tam_tab           = "550"; // tamanho da tabela em px ou em %
-        $title_tab         = $this->traducao->get_titulo_formulario04(); // título da tabela
+        $title_tab         = "Adicionar nova eleição"; // título da tabela
         $col[0]['color']   = "#FFFFFF";
         $col[0]['nowrap']  = false;
         $col[0]['width']   = "25%";
@@ -146,12 +146,12 @@ class Eleicao_Add_View extends View {
         Array_push($validacao, $this->form->validar('descricao','value', '==', '""',$this->traducao->get_leg31(),Array("descricao"),$this->get_tema(),$this->get_idioma()));
         $lin[0] = $colunas;
 
-        $colunas[0] = $this->form->texto($this->traducao->get_leg02(), TRUE);
+        $colunas[0] = $this->form->texto("Data de Inicio", TRUE);
         $colunas[1] = $this->form->textfield("data_inicio",$this->post_request['data_inicio'],50);
         Array_push($validacao, $this->form->validar('data_inicio','value', '==', '""',$this->traducao->get_leg32(),Array("data_inicio"),$this->get_tema(),$this->get_idioma()));
         $lin[] = $colunas;
 
-        $colunas[0] = $this->form->texto($this->traducao->get_leg03(), TRUE);
+        $colunas[0] = $this->form->texto("Data Fim", TRUE);
         $colunas[1] = $this->form->textfield("data_fim",$this->post_request['data_fim'],50);
         Array_push($validacao, $this->form->validar('data_fim','value', '==', '""',$this->traducao->get_leg33(),Array("data_fim"),$this->get_tema(),$this->get_idioma()));
         $lin[] = $colunas;

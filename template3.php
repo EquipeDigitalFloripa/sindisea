@@ -10,7 +10,7 @@ $hoje = date("Y-m-d H:i:s");
 
 if ($eleicao['data_inicio'] > $hoje or $eleicao['data_fim'] < $hoje) {
 
-    header('Location:/');
+    // header('Location:/');    
 };
 
 ?>
@@ -353,8 +353,10 @@ $ctr_chapas = new ChapaEleicao_Control($post_request);
 
 $ctr_candidatos = new Candidato_Control($post_request);
 
-$chapas1 = $ctr_chapas->Lista_Chapas(1);
+// muda de acordo com a eleicao que quer
+$chapas1 = $ctr_chapas->Lista_Chapas(3);
 
+// muda de acordo com a eleicao que quer
 $chapas2 = $ctr_chapas->Lista_Chapas(2);
 
 
@@ -668,7 +670,6 @@ $branco_nulo = '<div class="chapa">
                     <form onsubmit="return false;">
 
                         <?php
-
                         foreach ($chapas1 as $value) {
 
                         ?>
@@ -825,7 +826,7 @@ $branco_nulo = '<div class="chapa">
 
                         participação e confira a divulgação dos resultados no dia
 
-                        22/05/2020
+                        22/05/2023
 
                     </div>
 

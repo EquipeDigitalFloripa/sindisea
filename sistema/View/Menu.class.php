@@ -200,8 +200,22 @@ class Menu {
         $centro_gerencia = base64_encode("Centro_Gerencia");
         $centro_add = base64_encode("Centro_Add_V");
         
+        // eleicao
         $eleicao_co = base64_encode("Eleicao_Control"); // CONTROLLER
+        $eleicao_gerencia = base64_encode("Eleicao_Gerencia");
         $eleicao_resultado = base64_encode("Eleicao_Resultado");
+        $eleicao_add = base64_encode("Eleicao_Add_V");
+
+        // candidatos eleicao
+        $candidato_co = base64_encode("Candidato_Control");
+        $candidato_gerencia = base64_encode("Candidato_Gerencia");
+        $candidato_add = base64_encode("Candidato_Add_V");
+
+        // chapas
+        $chapa_co = base64_encode("ChapaEleicao_Control");
+        $chapa_gerencia = base64_encode("ChapaEleicao_Gerencia");
+        $chapa_add = base64_encode("ChapaEleicao_Add_V");
+
 
         /**
          * ************************************************************************************************************
@@ -327,6 +341,23 @@ class Menu {
                                         </ul>
                                     </ul>
                                 </li> 
+                                <li class=\"menu\" ><a href=\"#\">Eleição</a>
+                                    <ul class=\"submenu\">
+                                        <ul class=\"subpartes\">                                                                                    
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$eleicao_co&ac=$eleicao_gerencia\">Gerencia Eleição</a></li>
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$eleicao_co&ac=$eleicao_resultado\">Resultado Eleição</a></li>
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$eleicao_co&ac=$eleicao_add\">Adicionar Eleição</a></li>
+                                        </ul>
+                                        <ul class=\"subpartes\">                                                                                    
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$candidato_co&ac=$candidato_gerencia\">Gerencia Candidatos</a></li>
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$candidato_co&ac=$candidato_add\">Adicionar Candidato</a></li>
+                                        </ul>
+                                        <ul class=\"subpartes\">                                                                                    
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$chapa_co&ac=$chapa_gerencia\">Gerencia Chapas</a></li>
+                                            <li><a href=\"sys.php?id_sessao=$id_sessao&idioma=$idioma&co=$chapa_co&ac=$chapa_add\">Adicionar Chapa</a></li>
+                                        </ul>
+                                    </ul>
+                                </li>
                             </ul>
                         <br style=\"clear: left\" />
                         <div id=\"submenu\"></div>

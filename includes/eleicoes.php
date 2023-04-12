@@ -69,6 +69,10 @@ if (isset($post_request['p']) && $post_request['p'] == 1) {
     } else {
         $retorno['codigo'] = 0;
     }
+
+    // retirar quando em producao
+    // $retorno['passa'] = 1;
+
 } else if (isset($post_request['p']) && $post_request['p'] == 3) {    
     
     $ctr_voto->Votar($voto1['id_voto_eleicao'], $post_request['voto']);

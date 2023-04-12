@@ -114,7 +114,7 @@ class Candidato_Altera_View extends View {
         $lin = Array();
         $colunas = Array();
         $validacao = Array();
-
+        print_r($this->descricoes);
         $idEleicao = $this->descricoes['chapa2'][$dados['id_chapa']];
 
         $colunas[0] = $this->form->texto($this->traducao->get_leg05(), TRUE);
@@ -124,7 +124,7 @@ class Candidato_Altera_View extends View {
 
 
         $colunas[0] = $this->form->texto($this->traducao->get_leg05(), TRUE);
-        $colunas[1] = $this->form->select("id_chapa", $this->traducao->get_leg21(), $dados['id_chapa'], $this->descricoes['id_chapa'], TRUE, "", "left", "");
+        $colunas[1] = $this->form->select("id_chapa", $this->traducao->get_leg21(), $dados['id_chapa'], $this->descricoes['chapa'], TRUE, "", "left", "");
         Array_push($validacao, $this->form->validar('id_chapa', 'value', '==', '"0"', $this->traducao->get_leg31(), Array("id_chapa"), $this->get_tema(), $this->get_idioma()));
         $lin[] = $colunas;
 
@@ -142,36 +142,36 @@ class Candidato_Altera_View extends View {
         $botoes = Array();
         $botoes[0] = $this->form->button("center");
 
-        $JS = '
-                <script> 
-                    function getChapa(){
-                        var str = $("#eleicao").val();
-                        $.ajax( {
-                                url: "AJAX_get_chapa.php",
-                                type: "POST",
-                                data: "id=" + str,
-                                cache: false,
-                                async: true,
-                                dataType: "json",
-                                success: function (data, textStatus, jqXHR) {
-                                    var selectbox = $(\'#id_chapa\');
-                                    selectbox.find(\'option\').remove();
-                                    $.each(data, function (i, d) {
-                                        $(\'<option>\').val(d.id_chapa_eleicao).text(d.nome).appendTo(selectbox);
-                                    });
-                                },
-                            });
-                    }                          
+        // $JS = '
+        //         <script> 
+        //             function getChapa(){
+        //                 var str = $("#eleicao").val();
+        //                 $.ajax( {
+        //                         url: "AJAX_get_chapa.php",
+        //                         type: "POST",
+        //                         data: "id=" + str,
+        //                         cache: false,
+        //                         async: true,
+        //                         dataType: "json",
+        //                         success: function (data, textStatus, jqXHR) {
+        //                             var selectbox = $(\'#id_chapa\');
+        //                             selectbox.find(\'option\').remove();
+        //                             $.each(data, function (i, d) {
+        //                                 $(\'<option>\').val(d.id_chapa_eleicao).text(d.nome).appendTo(selectbox);
+        //                             });
+        //                         },
+        //                     });
+        //             }                          
                     
-                    $(document).ready(function (){
-                        getChapa()
-                        $("#eleicao").change(function(){                            
-                            getChapa()
-                        });      
-                    });
+        //             $(document).ready(function (){
+        //                 getChapa()
+        //                 $("#eleicao").change(function(){                            
+        //                     getChapa()
+        //                 });      
+        //             });
                     
-                </script>
-            ';
+        //         </script>
+        //     ';
 
 
         /*

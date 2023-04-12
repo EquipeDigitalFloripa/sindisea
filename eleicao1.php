@@ -16,7 +16,7 @@ JAVASCRIPT;
  * CONTEÚDO
  * *************************************************************************** */
 
-$vetor_conteudo['nome_link'] = "Eleições 2020";
+$vetor_conteudo['nome_link'] = "Eleições 2023";
 
 
 TemplateManager::start();

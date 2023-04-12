@@ -63,7 +63,8 @@ class Candidato_Control extends Control {
     public function Candidato_Add() {
 
         // CARREGA DAO, SETA DADOS e SALVA
-        $objeto = new Candidato();
+        $objeto = new Candidato(); 
+        
 
         $this->traducao->loadTraducao("3035", $this->post_request['idioma']);
         $objeto->set_nome($this->post_request['nome']);
@@ -73,7 +74,7 @@ class Candidato_Control extends Control {
         $this->post_request['msg_tp'] = "sucesso";
         $this->post_request['msg'] = $this->preparaTransporte($this->traducao->get_leg36());
         $this->candidato_dao->Save($objeto);
-        $this->Candidato_Add_V();
+        $this->Candidato_Gerencia();
     }
 
     public function Candidato_Gerencia() {
@@ -196,6 +197,7 @@ class Candidato_Control extends Control {
      *
      */
     public function Candidato_Altera() {
+
 
         $objeto = $this->candidato_dao->loadObjeto($this->post_request['id']);
         $objeto->set_nome($this->post_request['nome']);
