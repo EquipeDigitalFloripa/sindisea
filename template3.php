@@ -354,11 +354,10 @@ $ctr_chapas = new ChapaEleicao_Control($post_request);
 $ctr_candidatos = new Candidato_Control($post_request);
 
 // muda de acordo com a eleicao que quer
-$chapas1 = $ctr_chapas->Lista_Chapas(3);
+$chapas1 = $ctr_chapas->Lista_Chapas(4);
 
 // muda de acordo com a eleicao que quer
-$chapas2 = $ctr_chapas->Lista_Chapas(2);
-
+$chapas2 = $ctr_chapas->Lista_Chapas(3);
 
 
 $branco_nulo = '<div class="chapa">
