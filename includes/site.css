@@ -2748,7 +2748,7 @@ section#conteudo_2nivel #arquivos #lista_arquivos .arquivo_download {
 
 section#conteudo_2nivel #arquivos #lista_arquivos span {
     float: left;
-    width: 100%;
+    width: 90%;
     height: auto;
     color: #333;
     font-family: Lato_Regular;
@@ -2768,13 +2768,14 @@ section#conteudo_2nivel #arquivos #lista_arquivos .nome_arquivo {
 
 section#conteudo_2nivel #arquivos #lista_arquivos .nome_arquivo span {
     float: left;
-    width: calc(100% - 35px);
+    width: 150px;
     height: auto;
     color: #333;
     font-family: Lato_Regular;
     font-size: 14px;
     line-height: 20px;
     margin-left: 35px;
+    overflow: hidden;
 }
 
 /*******************************************************************************

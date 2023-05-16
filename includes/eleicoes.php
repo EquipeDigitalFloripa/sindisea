@@ -71,7 +71,7 @@ if (isset($post_request['p']) && $post_request['p'] == 1) {
     }
 
     // retirar quando em producao
-    $retorno['passa'] = 1;
+    // $retorno['passa'] = 1;
 
 } else if (isset($post_request['p']) && $post_request['p'] == 3) {    
     
