@@ -1,6 +1,6 @@
 <?php
 
-ini_set("display_errors", true);
+ini_set("display_errors", false);
 
 
 
@@ -8,7 +8,7 @@ extract($vetor_conteudo);
 
 $ctr_eleicao = new Eleicao_Control($post_request);
 
-$eleicao = $ctr_eleicao->Pega_Eleicao(1);
+$eleicao = $ctr_eleicao->Pega_Eleicao(3);
 
 $hoje = date("Y-m-d H:i:s");
 
@@ -367,9 +367,9 @@ $ctr_chapas = new ChapaEleicao_Control($post_request);
 
 $ctr_candidatos = new Candidato_Control($post_request);
 
-$chapas1 = $ctr_chapas->Lista_Chapas(1);
+$chapas1 = $ctr_chapas->Lista_Chapas(4);
 
-$chapas2 = $ctr_chapas->Lista_Chapas(2);
+$chapas2 = $ctr_chapas->Lista_Chapas(3);
 
 
 
@@ -709,7 +709,6 @@ $branco_nulo = '<div class="chapa">
                                             $candidatos = $ctr_candidatos->Lista_Candidatos(" AND id_chapa = " . $value['id_chapa_eleicao']);
 
 
-
                                             $desc_candidatos = $ctr_candidatos->Lista_Descricoes();
 
                                             foreach ($candidatos as $value2) {
@@ -838,7 +837,7 @@ $branco_nulo = '<div class="chapa">
 
                         participação e confira a divulgação dos resultados no dia
 
-                        22/05/2020
+                        17/05/2023
 
                     </div>
 

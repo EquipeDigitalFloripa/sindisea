@@ -25,7 +25,7 @@ if (isset($post_request['p']) && $post_request['p'] == 1) {
     if ($associado) {
         $codigo = rand(10000, 99999);
 
-        if ($voto1['status_voto_eleicao'] == 'A' && $voto2['status_voto_eleicao'] == 'A') {
+        if ($voto1['status_voto_eleicao'] == 'A' && $voto2['status_voto_eleicao'] == 'A' && strtotime($voto1['data_voto']) > strtotime('2023-01-01') && strtotime($voto2['data_voto']) > strtotime('2023-01-01')) {
             $retorno['codigo'] = -1;
         } else if ($voto1['status_voto_eleicao'] == "A" && $voto2['status_voto_eleicao'] == "E") {
             $result = $sms->Send($telefoneFormat, "Confirme seu codigo novamente no site do Sindisea. Codigo: " . $codigo);

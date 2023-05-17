@@ -694,7 +694,6 @@ $branco_nulo = '<div class="chapa">
                                             $candidatos = $ctr_candidatos->Lista_Candidatos(" AND id_chapa = " . $value['id_chapa_eleicao']);
 
 
-
                                             $desc_candidatos = $ctr_candidatos->Lista_Descricoes();
 
                                             foreach ($candidatos as $value2) {
@@ -825,7 +824,7 @@ $branco_nulo = '<div class="chapa">
 
                         participação e confira a divulgação dos resultados no dia
 
-                        22/05/2023
+                        17/05/2023
 
                     </div>
 

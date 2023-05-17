@@ -47,7 +47,14 @@
             }(document, 'script', 'facebook-jssdk'));
         </script>
         -->
-    <?php // include('includes/popup.php'); 
+    <?php 
+        $startDate = strtotime('2023-05-17 08:00:00');
+        $currentDate = strtotime(date('Y-m-d h:i:s'));
+        if($startDate < $currentDate) {
+            echo 'date is in the past';
+            include('includes/popup.php');
+        }
+        //  
     ?>
     <header id="topo_capa">
         <div class="centraliza_conteudo">

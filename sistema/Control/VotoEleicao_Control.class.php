@@ -40,7 +40,7 @@ class VotoEleicao_Control extends Control {
     }
 
     public function Verifica_Voto($id_associado, $id_eleicao, $codigo = -1) {
-        $condicao = "AND id_associado = $id_associado AND id_eleicao = $id_eleicao AND (status_voto_eleicao = 'A' OR status_voto_eleicao = 'E')";
+        $condicao = "AND id_associado = $id_associado AND id_eleicao = $id_eleicao AND (status_voto_eleicao = 'A' OR status_voto_eleicao = 'E') ";
         if ($codigo != -1) {
             $condicao .= " AND codigo = $codigo";
         }

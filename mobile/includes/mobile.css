@@ -2859,7 +2859,7 @@ section#conteudo_2nivel .veja_mais_galerias{
     list-style-type: none;
     list-style-position: inside;
     margin-top: 5px;
-    display: none;
+    /* display: none; */
 }
 
 .infos .texto_chapa .integrantes li {
@@ -2881,7 +2881,7 @@ section#conteudo_2nivel .veja_mais_galerias{
     height: 100%;
     background: rgba(255,255,255,0.92);
     top: 0;
-    display: none;
+    /* display: none; */
 	z-index: 99999999;
 }
 

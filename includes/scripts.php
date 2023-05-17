@@ -410,6 +410,7 @@ $html_js .= '  <script type="text/javascript">
                             if(data[\'sucesso\'] == 1){
                                 msg = "Enviamos sua solicitação de senha por email.";
                                 $("#msg_formulario").text(msg);
+                                alert(msg);
                             }else{
                                 msg = "Desculpe, não encontramos este CPF em nosso cadastro.";
                                 cpf.focus();
