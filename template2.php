@@ -5,7 +5,9 @@ extract($vetor_conteudo);
 
 <head>
     <?php include('./includes/metatags.php'); ?>
-
+    <?php 
+            include('includes/popup.php');
+            ?>
     <?php echo (isset($metas)) ? $metas : ""; ?>
 
     <link href="/includes/site.css" type="text/css" rel="stylesheet">

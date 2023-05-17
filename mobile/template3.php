@@ -14,7 +14,7 @@ $hoje = date("Y-m-d H:i:s");
 
 if ($eleicao['data_inicio'] > $hoje or $eleicao['data_fim'] < $hoje) {
 
-    header('Location:/');
+    // header('Location:/');
 };
 
 ?>

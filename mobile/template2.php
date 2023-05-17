@@ -42,7 +42,9 @@ extract($vetor_conteudo);
 </head>
 
 <body>
-
+<?php 
+            include('includes/popup.php');
+            ?>
     <div id="escurecedor">
         <div id="close_area_restrita"></div>
         <div id="area_restrita">
