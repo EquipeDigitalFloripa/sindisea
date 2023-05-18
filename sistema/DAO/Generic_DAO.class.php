@@ -153,7 +153,8 @@ class Generic_DAO {
         $status = $this->pega_campo_status();
 
         $sql = "SELECT count($this->chave) FROM $this->tabela WHERE $status <> \"D\" $condicao";
-//        echo $sql;
+    //    echo $sql;
+    //    echo '<br>';
         $result = $this->conexao->consulta("$sql");
         $ret = $this->conexao->criaArray($result);
         return $ret[0][0];

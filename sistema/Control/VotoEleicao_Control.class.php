@@ -88,7 +88,7 @@ class VotoEleicao_Control extends Control {
     }
     
     public function Conta_Votos($id_eleicao, $id_chapa){
-        $condicao = "AND id_eleicao = $id_eleicao AND id_chapa = $id_chapa AND (status_voto_eleicao = 'A')";
+        $condicao = "AND id_eleicao = $id_eleicao AND id_chapa = $id_chapa AND (status_voto_eleicao = 'A') AND data_voto > '2023-01-01'";
         return $total_reg = $this->voto_eleicao_dao->get_Total("$condicao");
     }
 

@@ -77,7 +77,8 @@ class Eleicao_Control extends Control {
         $ctr_chapas = new ChapaEleicao_Control($this->post_request);
         $ctr_votos = new VotoEleicao_Control($this->post_request);
         
-        $condicao .= " and (status_eleicao = \"A\" or status_eleicao = \"I\")";
+        // $condicao = " and (status_eleicao = \"A\" or status_eleicao = \"I\")";
+        $condicao = " and (status_eleicao = \"A\")";
         $total_reg = $this->eleicao_dao->get_Total("$condicao");
 
         $ordem = "id_eleicao DESC";
@@ -88,18 +89,22 @@ class Eleicao_Control extends Control {
         $chapas = Array();
         while ($i < count($objetos)) {
             $dados = $objetos[$i]->get_all_dados();
-            $chapa = $ctr_chapas->Lista_Chapas(""); 
+            $chapa = $ctr_chapas->Lista_Chapas($dados['id_eleicao']); 
             array_push($chapa, [ "id_chapa_eleicao" => -1, "nome" => "Branco" ]);            
             array_push($chapa, [ "id_chapa_eleicao" => 0, "nome" => "Nulo" ]);
             
             
+            
             for($x = 0; $x < sizeof($chapa); $x++) {
-                $chapas[$dados['id_eleicao']][$chapa[$x]['nome']] = $ctr_votos->Conta_Votos($dados['id_eleicao'], $chapa[$x]['id_chapa_eleicao']);
+                $chapas[$dados['id_eleicao']][$chapa[$x]['nome']] = $ctr_votos->Conta_Votos(($dados['id_eleicao']), $chapa[$x]['id_chapa_eleicao']);
             }
             $i++;
         }
         
         $descricoes = $chapas;
+
+        // echo"<pre>";
+        // print_r($descricoes);die;
         //CARREGA A VIEW E MOSTRA
         $vw = new Eleicao_Resultado_View($this->post_request, $objetos, $descricoes, $total_reg, 10);
         $vw->showView();
