@@ -452,7 +452,7 @@ $branco_nulo = '<div class="chapa">
 
                     <div class="email">
 
-                        <p>sindiasea@sindiasea.org.br</p>
+                        <p>sindisea@sindisea.org.br</p>
 
                     </div>
 

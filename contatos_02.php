@@ -24,6 +24,7 @@ $dominio = $config->get_dominio();
 /* CONFIGURA LISTA DE EMAIL PARA DESTINATÁRIO */
 $lista = array();
 $lista[0] = $email;
+$lista[1] = "felipe@equipedigital.com";
 
 /* CONFIGURA VARIÁVEIS RECEBIDA DO FROMULÁRIO VIA POST */
 

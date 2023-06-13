@@ -76,7 +76,7 @@ extract($vetor_conteudo);
                         <p>(48) 99182 2462&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp</p>
                     </div>
                     <div class="email">
-                        <p>sindiasea@sindiasea.org.br</p>
+                        <p>sindiasea@sindisea.org.br</p>
                     </div>
                 </div>
 

@@ -20,7 +20,7 @@ class Config
 
     public $cliente = "SINDIASEA";
     public $dominio = "http://sindiasea.org.br";
-    public $email = "sindiasea@sindiasea.org.br";
+    public $email = "sindisea@sindisea.org.br";
 
     /**
      * @var String Usuário da factory de objetos Mysql
@@ -60,16 +60,16 @@ class Config
      *      public $email_port = 465;
      *      public $email_secure = 'ssl';
      */
-    public $email_host = "mail.sindisea.org.br"; //smtp.equipedigital.info
-    public $email_username = "no-reply@sindisea.org.br";
-    public $email_password = "equipeqwasZX!@";
-    public $email_port = 587; // Para ssl port 465 | Para tls port 587
+    // public $email_host = "mail.sindisea.org.br"; //smtp.equipedigital.info
+    // public $email_username = "no-reply@sindisea.org.br";
+    // public $email_password = "equipeqwasZX!@";
+    // public $email_port = 587; // Para ssl port 465 | Para tls port 587
     // public $email_secure = 'tls'; // tls
-    //    public $email_host = "smtp.equipedigital.info";
-    //    public $email_username = "noreply@equipedigital.info";
-    //    public $email_password = "equipeqwasZX!@";
-    //    public $email_port = 587;
-    //    public $email_secure = 'tls';
+       public $email_host = "smtp.gmail.com";
+       public $email_username = "contato@sindisea.org.br";
+       public $email_password = "diar02!@";
+       public $email_port = 465;
+       public $email_secure = 'ssl';
 
     /**
      * @var $galerias_destaques configura número de Galerias Destaques na capa

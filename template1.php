@@ -68,7 +68,7 @@
                         <p>(48) 99182 2462&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp</p>
                     </div>
                     <div class="email">
-                        <p>sindiasea@sindiasea.org.br</p>
+                        <p>sindisea@sindisea.org.br</p>
                     </div>
                 </div>
 
